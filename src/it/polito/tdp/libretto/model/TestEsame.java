@@ -12,7 +12,7 @@ public class TestEsame {
 		System.out.println(ami);
 		
 		System.out.println(ami.equals(tdp));
-		tdp.supera(30,LocalDate.now());
+		tdp.supera(30,LocalDate.now()); // LocalDate.now()---> memorizza la data odierna
 		System.out.println(tdp);
 		tdp.supera(18,LocalDate.now());
 		System.out.println(tdp);
