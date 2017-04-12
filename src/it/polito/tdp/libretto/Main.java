@@ -12,14 +12,15 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			FXMLLoader loader=new FXMLLoader(getClass().getResource("Libretto.fxml"));
-			BorderPane root = (BorderPane)loader.load(); // salvo la lista in una variabile
 			
-			LibrettoController controller=loader.getController();
-			Model model=new Model(); // salvo il controllero in una variabile
-			controller.setModel(model);
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("Libretto.fxml")) ;
+			BorderPane root = (BorderPane)loader.load();
 			
-			Scene scene = new Scene(root);
+			LibrettoController controller = loader.getController() ;
+			Model model = new Model() ;
+			controller.setModel(model) ;
+			
+			Scene scene = new Scene(root);			
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
